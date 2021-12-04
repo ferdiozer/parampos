@@ -1,15 +1,27 @@
 {
   "name": "parampos",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Param payment systems",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "param",
+    "parampos",
+    "parampay",
+    "param api",
+    "param api node.js",
+    "param api node.js client",
+    "payment",
+    "payment processing",
+    "payment systems"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "soap": "^0.43.0"
+    "request": "^2.88.2",
+    "soap": "^0.43.0",
+    "xml2js": "^0.4.23"
   }
 }
