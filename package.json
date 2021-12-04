@@ -1,6 +1,6 @@
 {
   "name": "parampos",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Param payment systems",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,16 @@
     "payment processing",
     "payment systems"
   ],
-  "author": "",
+  "author": {
+    "email": "info@ferdiozer.com",
+    "name": "Ferdi Özer",
+    "url": "https://www.ferdiozer.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferdiozer/parampos.git"
+  },
+  "homepage": "https://github.com/ferdiozer/parampos#readme",
   "license": "ISC",
   "dependencies": {
     "request": "^2.88.2",
