@@ -189,6 +189,7 @@ function setPaid(url, {
                             code: result['soap:Envelope']['soap:Body']['Pos_OdemeResponse']['Pos_OdemeResult']['Islem_ID'],
                             bank_code: result['soap:Envelope']['soap:Body']['Pos_OdemeResponse']['Pos_OdemeResult']['Banka_Sonuc_Kod'],
                             message: result['soap:Envelope']['soap:Body']['Pos_OdemeResponse']['Pos_OdemeResult']['Sonuc_Str'],
+                            redirect: result['soap:Envelope']['soap:Body']['Pos_OdemeResponse']['Pos_OdemeResult']['UCD_URL'],
                         }
                         return resolve(resultFin)
                     } catch (err) {
