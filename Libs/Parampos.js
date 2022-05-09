@@ -56,11 +56,11 @@ class Parampos {
 
         return new Promise(async (resolve, reject) => {
             const securityString = this.CLIENT_CODE + this.GUID + args.installment + total + total + orderId + failUrl + successUrl;
-            console.log(securityString);
+            //  console.log(securityString);
             try {
                 const createdHash = await Soap.requestHash(url, securityString)
                 // console.log({ createdHash })
-                console.log(createdHash)
+                // console.log(createdHash)
                 args.createdHash = createdHash;
                 Soap.requestPay(url, args).then(result => {
                     // // console.log({ result })

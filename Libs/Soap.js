@@ -29,7 +29,7 @@ function createHashSecurityKey(url, securityString) {
                 parser.parseString(body, (err, result) => {
                     try {
                         const myHash = result['soap:Envelope']['soap:Body']['SHA2B64Response']['SHA2B64Result']
-                        console.log(myHash)
+                        //    console.log(myHash)
                         return resolve(myHash)
                     } catch (error) {
                         return reject(error)
@@ -64,7 +64,7 @@ function setPaid(url, {
     securityType,
     ipAddress,
 }) {
-    console.log(createdHash + "last hash")
+    //  console.log(createdHash + "last hash")
 
 
     let xml = `<?xml version="1.0" encoding="utf-8"?> <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -116,16 +116,16 @@ function setPaid(url, {
             'Content-Type': "text/xml",
         }
     };
-    
+
     return new Promise((resolve, reject) => {
 
         request(options, (error, response, body) => {
-            console.log('JSON response', response);
+            // console.log('JSON response', response);
 
             if (!error && response.statusCode == 200) {
                 var parser = new xml2js.Parser({ explicitArray: false, trim: true });
                 parser.parseString(body, (err, result) => {
-                    console.log('JSON result', result);
+                    //  console.log('JSON result', result);
                     try {
                         const resultFin = {
                             success: result['soap:Envelope']['soap:Body']['Pos_OdemeResponse']['Pos_OdemeResult']['Islem_ID'] == '0' ? false : true,
@@ -136,7 +136,7 @@ function setPaid(url, {
                         }
                         return resolve(resultFin)
                     } catch (err) {
-                        console.log(err)
+                        //  console.log(err)
                         return reject(err)
                     }
                 });
